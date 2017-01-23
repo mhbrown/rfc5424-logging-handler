@@ -24,7 +24,7 @@ class TestRfc5424(TestCase):
         sh = Rfc5424SysLogHandler(ADDRESS)
         logger.addHandler(sh)
         msg_type = 'interesting'
-        logger.debug('This is an {} message with a msgid'.format(msg_type), msgid='TCPIN')
+        logger.info('This is an {} message with a msgid'.format(msg_type), msgid='TCPIN')
 
     def test_basic_structured_data(self):
         logger = Rfc5424SysLogLogger('syslogtest')
@@ -38,4 +38,4 @@ class TestRfc5424(TestCase):
             "eventSource": "Application",
             "eventID": "1011"
         }
-        logger.warning('This is an {} message with structured_data'.format(msg_type), structured_data=structured_data)
+        logger.info('This is an {} message with structured_data'.format(msg_type), structured_data=structured_data)
