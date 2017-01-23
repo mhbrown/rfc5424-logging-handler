@@ -7,7 +7,7 @@ with open('CHANGELOG.rst') as changelog_file:
 
 setup(
     name='rfc5424-logging-handler',
-    version='0.0.2',
+    version='0.1.0',
     packages=find_packages(),
     author='Joris Beckers',
     author_email='joris.beckers@gmail.com',
@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: System :: Logging',
         'Development Status :: 4 - Beta',
@@ -34,8 +35,8 @@ setup(
     install_requires=[
         'tzlocal',
     ],
-    test_suite='rfc5424logging.tests',
     tests_require=[
+        'pytest',
         'mock',
     ],
     zip_safe=False,
